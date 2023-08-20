@@ -9,7 +9,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest
+// 계층형 테스트 : 웹과 관련된 빈만 등록해준다. ex) 컨트롤러
+// 컨버터 빈을 등록하려면 WebMvcTest 안에 빈을 직접 등록해준다.
+@WebMvcTest({EventFormatter.class, EventController.class})
 class EventControllerTest {
 
     @Autowired
