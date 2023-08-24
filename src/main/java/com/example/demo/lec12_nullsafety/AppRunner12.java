@@ -1,20 +1,19 @@
-package com.example.demo.lec11_proxyaop;
+package com.example.demo.lec12_nullsafety;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-// @Component
-public class AppRunner11 implements ApplicationRunner {
+@Component
+public class AppRunner12 implements ApplicationRunner {
 
     @Autowired
     EventService eventService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        eventService.createEvent();
-        eventService.publishEvent();
-        eventService.deleteEvent();
+        String message = eventService.createEvent("keesun");
+
     }
 }
