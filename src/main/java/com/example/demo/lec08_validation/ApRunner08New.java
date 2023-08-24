@@ -10,7 +10,7 @@ import org.springframework.validation.Validator;
 
 import java.util.Arrays;
 
-@Component
+// @Component
 public class ApRunner08New implements ApplicationRunner {
 
     @Autowired
